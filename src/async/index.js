@@ -1,4 +1,4 @@
-const somethingAsync = (estado) => {
+const somethingAsync = (estado = true) => {
     return new Promise((resolve, reject) => {
         if (estado) {
             setTimeout(() => {
@@ -11,8 +11,10 @@ const somethingAsync = (estado) => {
 }
 
 const doSomethingAsync = async () => {
+    // Para tomar los errores que pueda ocurrir en nuestra asyncronia nosotros debemos usar el try-catch para poder controlar los errores 
+    // Dentro del try estara el flujo correcto y luego del catch todo el flujo cuando algo salio mal
     try {
-        const resultado = await somethingAsync(true);
+        const resultado = await somethingAsync();
         console.log(resultado)
     } catch (error) {
         console.log(error);
