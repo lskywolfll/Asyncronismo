@@ -12,5 +12,9 @@
     "async/await"
   ],
   "author": "Rene <renealejandrosanchezmorales@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "xmlhttprequest": "^1.8.0"
+  }
 }
